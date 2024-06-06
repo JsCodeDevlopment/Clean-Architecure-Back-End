@@ -6,7 +6,7 @@ export type ProductProps = {
 };
 
 export class Product {
-  private constructor(private props: ProductProps) {
+  private constructor(private readonly props: ProductProps) {
     this.validate();
   }
 
