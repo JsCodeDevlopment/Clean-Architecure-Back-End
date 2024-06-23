@@ -1,15 +1,8 @@
 import { Product } from "../../../domain/product/entity/product.entity";
 import { ProductGateway } from "../../../domain/product/gateway/product.gateway";
 import { Usecase } from "../../usecase";
-
-export type CreateProductInputDto = {
-  name: string;
-  price: number;
-};
-
-export type CreateProductOutputDto = {
-  id: string;
-};
+import { CreateProductInputDto } from "./dto/create.input.dto";
+import { CreateProductOutputDto } from "./dto/create.output.dto";
 
 export class CreateProductUsecase
   implements Usecase<CreateProductInputDto, CreateProductOutputDto>
