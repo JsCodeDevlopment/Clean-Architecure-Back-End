@@ -7,6 +7,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
 ## 🚧 Estrutura do Projeto
 
 📂 **Esquema de pastas:** Este projeto segue os princípios da Clean Architecture, dividindo o código em camadas bem definidas:
+```
   src/
     |- domain
     |- infra
@@ -58,6 +59,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
                       list.output.dto.ts
                   list.usecase.ts
         usecase.ts
+```
 
 ## 🎯 Instalação
 1°→ Instalação das dependências:
