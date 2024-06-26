@@ -33,13 +33,13 @@ export class ProductRepository implements ProductGateway {
     );
   }
 
-  public async listById(id: string): Promise<Product | null> {
+  public async listById(id: string): Promise<Product> {
     const product = await this.prismaClient.product.findUnique({
       where: { id },
     });
 
     if (!product) {
-      return null;
+      throw new Error("Product not found");
     }
 
     return Product.with({

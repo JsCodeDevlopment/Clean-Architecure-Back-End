@@ -1,1 +1,3 @@
-export type ListProductByIdInputDto = void;
+export type ListProductByIdInputDto = {
+  id: string;
+};
