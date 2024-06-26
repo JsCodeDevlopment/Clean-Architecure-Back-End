@@ -18,9 +18,7 @@ export class DeleteProductUsecase
   }: DeleteProductInputDto): Promise<DeleteProductOutputDto> {
     const aProduct = await this.productGateway.listById(id);
 
-    if (!aProduct) {
-      throw new Error("Product not found");
-    }
+    if (!aProduct) throw new Error("Product not found");
 
     await this.productGateway.delete(aProduct.id);
 
