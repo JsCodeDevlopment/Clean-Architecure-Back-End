@@ -14,15 +14,25 @@ export class UpdateProductUsecase
   }
 
   public async execute({
+    id,
     name,
     price,
   }: UpdateProductInputDto): Promise<UpdateProductOutputDto> {
-    const aProduct = Product.create(name, price);
-  
-    await this.productGateway.update(aProduct);
-  
-    const output = this.presentOutput(aProduct);
-  
+    const productExist = await this.productGateway.listById(id);
+    
+    if (!productExist) throw new Error("Product not found");
+
+    const updatedProduct = Product.with({
+      id: productExist.id,
+      name: name || productExist.name,
+      price: price || productExist.price,
+      quantity: productExist.quantity,
+    });
+
+    await this.productGateway.update(updatedProduct);
+
+    const output = this.presentOutput(updatedProduct);
+
     return output;
   }
 
