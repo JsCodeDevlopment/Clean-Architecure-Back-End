@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node --watch src/main.ts"
+    "dev": "ts-node src/main.ts"
   },
   "keywords": [],
   "author": "",
