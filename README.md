@@ -60,6 +60,40 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
      |------------ list.usecase.ts
      |--- usecase.ts
 ```
+## ⚙ Resumo da Estrutura
+
+**- Entidade:** Define a estrutura e lógica de negócios básica da(s) Entidade(s).
+**- Caso de Uso (UseCase):** Implementa a lógica de aplicação específica para criação, edição, deleção, listage ou atualização de uma entidade.
+**- Configurações de Rota:** Define a abstração para as rotas HTTP.
+**- Rota Específica:** Implementa a lógica da rota para executar uma ação feita no usecase.
+**- Ponto de Entrada (Main):** Configura e inicializa a aplicação, incluindo a injeção de dependências.
+
+## Fluxo da Aplicação
+
+# Recepção da Requisição:
+- O cliente faz uma requisição HTTP ao servidor Express.
+- O servidor Express direciona a requisição para a rota apropriada com base no método HTTP e no caminho.
+
+# Rota:
+- A rota recebe a requisição e extrai os dados necessários.
+- Cria um DTO de entrada (CreateProductInputDto) com os dados extraídos.
+- Chama o caso de uso (CreateProductUsecase), passando o DTO de entrada.
+
+# Caso de Uso (UseCase):
+- O caso de uso recebe o DTO de entrada.
+- Cria uma instância da entidade Product usando o método Product.create.
+- Interage com o repositório (ProductGateway) para persistir o produto no banco de dados.
+- Gera um DTO de saída (CreateProductOutputDto) com os dados do produto criado.
+
+# Repositório (Gateway):
+- Implementa a interface do repositório definida no domínio.
+- Usa Prisma para realizar operações no banco de dados.
+- Retorna os dados necessários para o caso de uso.
+
+# Resposta da Rota:
+- A rota recebe o DTO de saída do caso de uso.
+- Formata a resposta e envia de volta ao cliente.
+
 
 ## 🎯 Instalação
 1°→ Instalação das dependências:
