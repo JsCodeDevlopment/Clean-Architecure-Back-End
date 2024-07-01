@@ -16,49 +16,49 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
   main.ts
 
   domain/
-    -| product
-          -| entity
-                product.entity.ts
-          -| gateway
-                product.gateway.ts
+    |-| product
+    |-----| entity
+    |---------- product.entity.ts
+    |-----| gateway
+    |---------product.gateway.ts
 
   infra/
-    -| api
-        -| express
-              -| routes
-                    -| products
-                          -| create
-                                -| dto
-                                    create.dto.ts
-                                create.route.express.ts
-                          -| list
-                              -| dto
-                                  list.dto.ts
-                              list.route.express.ts
-                    api.express.ts
-                    route.ts
-    -| repositories
-            -| product
-                  product.repository.ts
-    -| api.ts
+    |-| api
+    |----| express
+    |---------| routes
+    |--------------| products
+    |--------------------| create
+    |-------------------------| dto
+    |----------------------------- create.dto.ts
+    |----------------------------- create.route.express.ts
+    |--------------------| list
+    |------------------------| dto
+    |---------------------------- list.dto.ts
+    |------------------------- list.route.express.ts
+    |--------------- api.express.ts
+    |--------------- route.ts
+    |-| repositories
+    |--------| product
+    |------------- product.repository.ts
+    |-| api.ts
 
     package/
-        -| prisma
-              prisma.ts
+     |--| prisma
+     |------- prisma.ts
 
     usecases/
-        -| products
-              -| create
-                    -| dto
-                        create.input.dto.ts
-                        create.output.dto.ts
-                    create.usecase.ts
-              -| list
-                  -| dto
-                      list.input.dto.ts
-                      list.output.dto.ts
-                  list.usecase.ts
-        usecase.ts
+     |--| products
+     |-------| create
+     |-----------| dto
+     |--------------- create.input.dto.ts
+     |--------------- create.output.dto.ts
+     |------------ create.usecase.ts
+     |-------| list
+     |-----------| dto
+     |--------------- list.input.dto.ts
+     |--------------- list.output.dto.ts
+     |------------ list.usecase.ts
+     |--- usecase.ts
 ```
 
 ## 🎯 Instalação
