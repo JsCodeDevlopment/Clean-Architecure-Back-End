@@ -68,7 +68,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
 - **Rota Específica:** Implementa a lógica da rota para executar uma ação feita no usecase.
 - **Ponto de Entrada (Main):** Configura e inicializa a aplicação, incluindo a injeção de dependências.
 
-## Fluxo da Aplicação
+## 🪀 Fluxo da Aplicação
 
 ### Recepção da Requisição:
 - O cliente faz uma requisição HTTP ao servidor Express.
