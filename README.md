@@ -1,10 +1,10 @@
 # Boilerplate - Back-end Typescript + Clean Architecture
 
-## 💬 Descrição
+## 💬 Descrição.
 
 Este projeto serve como um ponto de partida para a criação de aplicações backend robustas e bem estruturadas, utilizando as melhores práticas da Clean Architecture.
 
-## 🚧 Estrutura do Projeto
+## 🚧 Estrutura do Projeto.
 
 📂 **Esquema de pastas:** Este projeto segue os princípios da Clean Architecture, dividindo o código em camadas bem definidas:
 ```
@@ -60,7 +60,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
      |------------ list.usecase.ts
      |--- usecase.ts
 ```
-## ⚙ Resumo da Estrutura
+## ⚙ Resumo da Estrutura.
 
 - **Entidade:** Define a estrutura e lógica de negócios básica da(s) Entidade(s).
 - **Caso de Uso (UseCase):** Implementa a lógica de aplicação específica para criação, edição, deleção, listage ou atualização de uma entidade.
@@ -68,7 +68,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
 - **Rota Específica:** Implementa a lógica da rota para executar uma ação feita no usecase.
 - **Ponto de Entrada (Main):** Configura e inicializa a aplicação, incluindo a injeção de dependências.
 
-## 🪀 Fluxo da Aplicação
+## 🪀 Fluxo da Aplicação.
 
 ### Recepção da Requisição:
 - O cliente faz uma requisição HTTP ao servidor Express.
@@ -76,14 +76,14 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
 
 ### Rota:
 - A rota recebe a requisição e extrai os dados necessários.
-- Cria um DTO de entrada (CreateProductInputDto) com os dados extraídos.
-- Chama o caso de uso (CreateProductUsecase), passando o DTO de entrada.
+- Cria um DTO de entrada Ex.: (CreateProductInputDto) com os dados extraídos.
+- Chama o caso de uso Ex.: (CreateProductUsecase), passando o DTO de entrada.
 
 ### Caso de Uso (UseCase):
 - O caso de uso recebe o DTO de entrada.
-- Cria uma instância da entidade Product usando o método Product.create.
-- Interage com o repositório (ProductGateway) para persistir o produto no banco de dados.
-- Gera um DTO de saída (CreateProductOutputDto) com os dados do produto criado.
+- Cria uma instância da entidade Product usando o método Ex.: Product.create.
+- Interage com o repositório Ex.: (ProductGateway) para persistir o produto no banco de dados.
+- Gera um DTO de saída Ex.: (CreateProductOutputDto) com os dados do produto criado.
 
 ### Repositório (Gateway):
 - Implementa a interface do repositório definida no domínio.
@@ -95,7 +95,7 @@ Este projeto serve como um ponto de partida para a criação de aplicações bac
 - Formata a resposta e envia de volta ao cliente.
 
 
-## 🎯 Instalação
+## 🎯 Instalação.
 1°→ Instalação das dependências:
 ```bash
 npm install
@@ -122,7 +122,7 @@ yarn dev
 
 ```
 
-## 💻 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas.
 
  <div align="center">
   <image src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -130,7 +130,7 @@ yarn dev
   <image src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" />
 </div>
 
-## 👨‍💻 Desenvolvedor
+## 👨‍💻 Desenvolvedor.
 
 | Foto                                                                                                                           | Nome                                                 | Cargo               |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------- |
